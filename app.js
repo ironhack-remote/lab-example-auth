@@ -24,6 +24,7 @@ app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+// here you still need to add the express session middleware
 
 // Express View engine setup
 app.set("views", path.join(__dirname, "views"));
