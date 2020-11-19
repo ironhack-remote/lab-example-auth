@@ -35,6 +35,7 @@ router.post("/signin", (req, res) => {
       password: hashedPassword,
     }).then((newUser) => {
       console.log("newUser:", newUser);
+      req.session.user = newUser;
       res.redirect("/");
     });
   });
